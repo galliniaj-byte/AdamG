@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Dashboard</title>
+<link rel="stylesheet" href="proj3.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Smart Dashboard</h1>
+
+<div class="section">
+
+<h2>Profile Manager</h2>
+
+<form id="profileForm">
+
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+
+<button type="submit">Save Profile</button>
+
+</form>
+
+<div id="profileMessage" class="message"></div>
+
+</div>
+
+
+<div class="section">
+
+<h2>To-Do List</h2>
+
+<input id="taskInput" placeholder="Enter a task">
+<button id="addTaskBtn">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<div class="controls">
+<button id="showAll">All</button>
+<button id="showCompleted">Completed</button>
+<button id="sortTasks">Sort by Date</button>
+<button id="saveJSON">Save JSON</button>
+<button id="loadJSON">Load JSON</button>
+</div>
+
+<div class="stats" id="taskStats"></div>
+
+</div>
+<div class="section">
+
+<h2>Featured User</h2>
+
+<button id="loadUserBtn">Load Random User</button>
+<button id="loadUsersBtn">Load All Users</button>
+<button id="favoriteUserBtn" onclick=
+    "favoriteUser(document.getElementById('user-display').textContent)">Favorite</button>
+<button onclick="getUsers()">Reload</button>
+<button onclick="document.getElementById('user-display').innerHTML = ''">
+  Clear
+</button>
+<button onclick="loadItems()">Load Items (Backend)</button>
+<button onclick="addItem()">Add Item (Backend)</button>
+
+<div id="user-display"></div>
+
+</div>
+
+</div>
+</div>
+
+<script src="proj3.js"></script>
+
+</body>
+</html>
